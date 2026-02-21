@@ -7,11 +7,11 @@ Desenvolvi esse projeto enquanto aprendia o uso de Funções e ai está um belo 
 
 COMO USAR
 
-1ª Clone o repositório e entre na pasta:
-
+1º Clone o repositório e entre na pasta:
 git clone https://github.com/SeuUsuario/Samuelflix.git
+
+2º entre no: 
 cd Samuelflix
 
-2ª Rode o script:
-
+3º Rode o script:
 python Samuelflix.py
