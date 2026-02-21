@@ -1,16 +1,17 @@
 import pprint
 
+line = "="
+titulo = "samuelflix"
 pp = pprint.PrettyPrinter(depth = 4)
-listaFilmes = {}
-'''listaFilmes = {                               //Para teste e não ter que ficar criando os filmes toda hora
+listaFilmes = {                              
     "Batman": {
         "Ano de Lançamento": 2020,
-        "Nota do Filme": 9.0,
+        "Nota do Filme": 7.8,
         "Valor do Filme": 30.00
     },
     "deadpoll": {
         "Ano de Lançamento": 2022,
-        "Nota do Filme": 8.0,
+        "Nota do Filme": 8.3,
         "Valor do Filme": 20.00
     },
     "homem aranha": {
@@ -18,7 +19,7 @@ listaFilmes = {}
         "Nota do Filme": 9.2,
         "Valor do Filme": 45.00
     }
-}'''
+}
 
 def AdicionarFilmes():
     QuantidadeFilme = int(input("Quantos Filmes Quer Adicionar: \n"))       
@@ -39,16 +40,14 @@ def AdicionarFilmes():
                 NotaFilme = float(input())
 
         listaFilmes[Filme.title()] = {          #Acrescenta tudo na Lista
-            "Ano de Laçamento": AnoLancamento,
+            "Ano de Lançamento": AnoLancamento,
             "Valor do Filme": ValorFilme,
             "Nota do Filme": NotaFilme
         }
 
         print(f"{Filme.title()} ({AnoLancamento}) - R$ {ValorFilme:.2f} - Nota: {NotaFilme}")
-AdicionarFilmes()
 
-
-pp.pprint(listaFilmes)  # Mostra o Dicionario formatado para melhor visialização
+#########################################################################################
 
 def DeletarFilme():
     DesejaDeletar = input("Deseja Deletar algum Filme? (Sim ou Não)\n")
@@ -89,9 +88,27 @@ def DeletarFilme():
     else:
         print("Processo Encerrado")
         exit()
-    
-DeletarFilme()
-
-pp.pprint(listaFilmes)
          
-        
+#########################################################################################
+def MostrarFilmes():
+    cor_vermelha = "\033[31m"
+    reset = "\033[0m"
+    for nome, info in listaFilmes.items():
+        print(line * 92,f"\nNome do Filme: {cor_vermelha}{nome}{reset}, Ano de Publicação: {info['Ano de Lançamento']}, Valor do Filme: {info['Valor do Filme']}, Nota do filme: {info['Nota do Filme']}\n")
+
+#########################################################################################
+
+while True:
+    print(line * 40, titulo.upper(), line * 40)
+    status = int(input("Você deseja: 1 - listar os filmes / 2 - Adicionar filme / 3 - Excluir Filme / 4 - Para sair: \n"))
+    if status == 1:
+        MostrarFilmes()
+    elif status == 2:
+        AdicionarFilmes()
+    elif status == 3:
+        DeletarFilme()
+    elif status == 4:
+        (print("Processo Encerrado"))
+        break
+    else:
+        print("Caractere invalido")
