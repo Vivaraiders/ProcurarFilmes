@@ -1,4 +1,17 @@
-SAMUELFLIX
-Apenas um simples programa em python que procura filmes em um banco de dados.
-desenvolvi enquanto aprendia o uso do list comprehension e ai está um belo uso dele em um pequeno projeto de aprendizado.
-tem um array com nomes de filmes e com list comprehension ele procura as palavras chaves digitadas pelo usuário e retona o resultado encontrado em ordem alfabética
+Samuelflix 🎬
+
+Gerenciador de filmes em Python. Permite adicionar, listar e deletar filmes pelo terminal.
+Desenvolvi esse projeto enquanto aprendia o uso de Funções e ai está um belo uso delas.
+
+
+
+COMO USAR
+
+1º Clone o repositório e entre na pasta:
+git clone https://github.com/SeuUsuario/Samuelflix.git
+
+2º entre no: 
+cd Samuelflix
+
+3º Rode o script:
+python Samuelflix.py
