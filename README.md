@@ -14,4 +14,4 @@ git clone https://github.com/SeuUsuario/Samuelflix.git
 cd Samuelflix
 
 3º Rode o script:
-python Samuelflix.py
+python StartSamuelflix.py
